@@ -89,7 +89,7 @@ class login:
         if self.Email.get()=="" or self.Password.get()=="":
             messagebox.showerror("Error","All fields required")
         else:
-            conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="register")
+            conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="register")
             my_cursor=conn.cursor()
             my_cursor.execute("select * from register where Email=%s and Password=%s",(
             self.Email.get(),
@@ -110,7 +110,7 @@ class login:
         if self.Email.get()=="":
             messagebox.showerror("Error","Email field is required")
         else:
-            conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="register")
+            conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="register")
             my_cursor=conn.cursor()
             my_cursor.execute("select * from register where Email=%s",(
             self.Email.get(),
@@ -170,7 +170,7 @@ class login:
         if self.New_Password.get() != self.VConfirm_Password.get():
             messagebox.showerror("Error","Password and Verify Password must be same",parent=self.root)
         else:
-            conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="register")
+            conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="register")
             my_cursor=conn.cursor()
             my_cursor.execute("select * from register where Security_Question=%s and Security_Answer= %s",(
             self.Security_Question.get(),
