@@ -249,7 +249,7 @@ class student:
             messagebox.showerror("Error","Not all field filled",parent=self.root)
         else:
             try:
-                conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="btech")
+                conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="btech")
                 my_cursor=conn.cursor()
                 my_cursor.execute("insert into student values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                 self.var_dep.get(),
@@ -275,7 +275,7 @@ class student:
                 messagebox.showerror("Error",f"Due To :{str(es)}",parent=self.root)
 
     def data_shw(self):
-        conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="btech")
+        conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="btech")
         my_cursor=conn.cursor()
         my_cursor.execute("Select * from Student")
         data=my_cursor.fetchall()
@@ -313,7 +313,7 @@ class student:
             try:
                 Update=messagebox.askyesno("Update","Do You want to update?",parent=self.root) 
                 if Update==1:
-                    conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="btech")
+                    conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="btech")
                     my_cursor=conn.cursor()
                     my_cursor.execute("Update Student set Department=%s,Year=%s,semester=%s,name=%s,division=%s,Roll_No=%s,gender=%s,DOB=%s,Email=%s,Phone=%s,Address=%s,Photo=%s where Id=%s",(
                         self.var_dep.get(),
@@ -348,7 +348,7 @@ class student:
             try:
                 delete=messagebox.askyesno("Delete","Do You want delete this record",parent=self.root)
                 if delete==1:
-                    conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="btech")
+                    conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="btech")
                     my_cursor=conn.cursor()
                     my_cursor.execute("delete from Student where Id=%s",(self.var_Id.get(),))
                 
@@ -386,7 +386,7 @@ class student:
             messagebox.showerror("Error","Not all field filled",parent=self.root)
         else:
             try:
-                conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="btech")
+                conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="btech")
                 my_cursor=conn.cursor()
                 my_cursor.execute("SELECT * from Student")
                 myresult=my_cursor.fetchall()
