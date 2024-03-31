@@ -113,7 +113,7 @@ class register:
                 
             else:
                 try:
-                    conn = mysql.connector.connect(host="localhost",username="root",password="Utk222004",database="register")
+                    conn = mysql.connector.connect(host="localhost",username="root",password="Ur password",database="register")
                     my_cursor=conn.cursor()
                     my_cursor.execute("insert into register values(%s,%s,%s,%s,%s,%s,%s)",(
                     self.First_Name.get(),
